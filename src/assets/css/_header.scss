@@ -1,0 +1,36 @@
+@use 'mixins';
+.header{
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    &__container{
+        @include mixins.container-styles;
+    }
+    &__content{
+        display: flex;
+        column-gap: 20px;
+        justify-content: center;
+        & input{
+            max-width: 300px;
+        }
+    }
+    &__block{
+        padding-top: 10px;
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        row-gap: 30px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
+    }
+    &__padding{
+        padding-top: 30px;
+    }
+}

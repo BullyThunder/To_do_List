@@ -1,0 +1,11 @@
+.container{
+    max-width: 1400px;
+    margin: 0px auto;
+}
+html, body {
+    margin: 0; /* Убирает отступы по умолчанию */
+    padding: 0;
+    height: 100%; /* Обеспечивает правильное растягивание на весь экран */
+    display: block; /* Убирает выравнивание через flex или grid */
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }

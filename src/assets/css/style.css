@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.container {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+html, body {
+  margin: 0; /* Убирает отступы по умолчанию */
+  padding: 0;
+  height: 100%; /* Обеспечивает правильное растягивание на весь экран */
+  display: block; /* Убирает выравнивание через flex или grid */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header__content {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  justify-content: center;
+}
+.header__content input {
+  max-width: 300px;
+}
+.header__block {
+  padding-top: 10px;
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  row-gap: 30px;
+}
+.header__block ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+.header__padding {
+  padding-top: 30px;
+}/*# sourceMappingURL=style.css.map */
