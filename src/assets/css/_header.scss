@@ -28,6 +28,11 @@
             justify-content: center;
             align-items: center;
             row-gap: 10px;
+            li{
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+            }
         }
     }
     &__padding{

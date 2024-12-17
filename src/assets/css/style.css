@@ -50,6 +50,12 @@ html, body {
   align-items: center;
   row-gap: 10px;
 }
+.header__block ul li {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
 .header__padding {
   padding-top: 30px;
 }/*# sourceMappingURL=style.css.map */
