@@ -10,6 +10,8 @@
     }
     &__content{
         display: flex;
+        flex-direction: column;
+        row-gap: 15px;
         column-gap: 20px;
         justify-content: center;
         & input{
@@ -18,22 +20,30 @@
     }
     &__block{
         padding-top: 10px;
-        display: flex;
         column-gap: 20px;
-        align-items: center;
         row-gap: 30px;
         ul {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             row-gap: 10px;
             li{
                 display: flex;
                 align-items: center;
                 column-gap: 5px;
             }
+            input[type="checkbox"]{
+                width: 20px;
+                height: 20px;
+                cursor: pointer; /* Добавим указатель, чтобы был виден клик */
+            }
+            button{
+                height: 30px;
+            }
         }
+    }
+    &__top{
+        display: flex;
+
     }
     &__padding{
         padding-top: 30px;

@@ -9,3 +9,6 @@ html, body {
     display: block; /* Убирает выравнивание через flex или grid */
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
+  .activeClass{
+    text-decoration: line-through;
+  }

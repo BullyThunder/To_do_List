@@ -4,6 +4,8 @@ const Greeting = () => {
   const HandleInputChange =(event) => {
     setInputValue(event.target.value);
   }
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [IsThrough,setIsActive] = useState(false);
   const[items, setItems] = useState(()=>{
     try{
     const saved_items = (localStorage.getItem("to_do"));
@@ -15,7 +17,7 @@ const Greeting = () => {
     }
     });
   const addToList = () =>{
-    const change_arr = [...items, {id: Date.now(),value:inputValue,checkTemp:false}];
+    const change_arr = [...items, {id: Date.now(),value:inputValue,checkTemp:false, IsThrough:false}];
     setItems(change_arr);
     setInputValue('');
     saveToLocalStorage(change_arr);
@@ -25,9 +27,9 @@ const Greeting = () => {
    setItems(del_arr);
    saveToLocalStorage(del_arr);
   }
-  const check_Change = (id,checkTemp) =>{
+  const check_Change = (id,) =>{
     const check_arr = items.map((item)=>
-    item.id === id ? {...item, checkTemp: !item.checkTemp} : item);
+    item.id === id ? {...item, checkTemp: !item.checkTemp, IsThrough: !item.IsThrough} : item);
     setItems(check_arr);
     saveToLocalStorage(check_arr);
   }
@@ -37,6 +39,7 @@ const Greeting = () => {
   return (
     <div className='header header__container'>
       <div className='header__content header__padding'>
+        <div className='header__top'>
       <input
           value={inputValue}
           onChange={HandleInputChange}
@@ -45,13 +48,19 @@ const Greeting = () => {
           placeholder="Success input"
         />
       <button className="button is-primary is-light"
+      disabled={!inputValue.trim()}
      onClick={addToList}
       >Add</button>
       </div>
       <div className='header__block'>
         <ul>
           {items.map((item)=>{ 
-         return <li key={item.id}><input
+         return <li 
+         key={item.id}
+         className={item.IsThrough ? 'activeClass' : 'noneClass'}
+         >
+
+          <input
           type='checkbox'
           checked={item.checkTemp}
           onChange={() =>check_Change(item.id)}
@@ -61,6 +70,7 @@ const Greeting = () => {
           className="button is-danger is-light">Delete</button></li>
           })}
         </ul>
+      </div>
       </div>
     </div>
   )

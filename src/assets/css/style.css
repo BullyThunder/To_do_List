@@ -12,6 +12,10 @@ html, body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+.activeClass {
+  text-decoration: line-through;
+}
+
 .header {
   display: flex;
   -moz-column-gap: 40px;
@@ -28,6 +32,8 @@ html, body {
 }
 .header__content {
   display: flex;
+  flex-direction: column;
+  row-gap: 15px;
   -moz-column-gap: 20px;
        column-gap: 20px;
   justify-content: center;
@@ -37,17 +43,13 @@ html, body {
 }
 .header__block {
   padding-top: 10px;
-  display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  align-items: center;
   row-gap: 30px;
 }
 .header__block ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   row-gap: 10px;
 }
 .header__block ul li {
@@ -55,6 +57,17 @@ html, body {
   align-items: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
+}
+.header__block ul input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer; /* Добавим указатель, чтобы был виден клик */
+}
+.header__block ul button {
+  height: 30px;
+}
+.header__top {
+  display: flex;
 }
 .header__padding {
   padding-top: 30px;
