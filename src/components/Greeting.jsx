@@ -45,7 +45,7 @@ const Greeting = () => {
           onChange={HandleInputChange}
           className="input is-success"
           type="text"
-          placeholder="Success input"
+          placeholder="write your task"
         />
       <button className="button is-primary is-light"
       disabled={!inputValue.trim()}
