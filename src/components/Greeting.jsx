@@ -27,7 +27,7 @@ const Greeting = () => {
    setItems(del_arr);
    saveToLocalStorage(del_arr);
   }
-  const check_Change = (id,) =>{
+  const check_Change = (id) =>{
     const check_arr = items.map((item)=>
     item.id === id ? {...item, checkTemp: !item.checkTemp, IsThrough: !item.IsThrough} : item);
     setItems(check_arr);
